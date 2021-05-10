@@ -37,7 +37,7 @@ test_image_urls = ["https://media.timeout.com/images/105590782/1372/772/image.jp
 
 count = 1
 test_image_urls.each do |pic|
-    Picture.create(name: "Picture #{count}", description: "#{Faker::Lorem.sentence(word_count: 3)}", test_image: pic)
+    Picture.create(name: "Picture #{count}", description: "#{Faker::Lorem.sentence(word_count: 3)}", image_url: pic)
     count += 1
 end
 
