@@ -38,6 +38,12 @@ class CollectionsController < ApplicationController
     @collection.destroy
   end
 
+  def user_collections()
+    @collections = Collection.where(user_id:params[:id])
+
+    render json: @collections
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_collection

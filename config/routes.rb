@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   get "/pictures/public", to: "pictures#public"
   post "/users/login", to: "users#login"
 
+  get "/users/:id/collections", to: "collections#user_collections"
+
   resources :pictures
   resources :picture_collections
   resources :collections

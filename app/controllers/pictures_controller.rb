@@ -18,6 +18,7 @@ class PicturesController < ApplicationController
     @picture = Picture.new(picture_params)
 
     if @picture.save
+      # PictureCollection.create(picture_id:@picture.id, collection_id:picture_params.collection_id)
       render json: @picture, status: :created, location: @picture
     else
       render json: @picture.errors, status: :unprocessable_entity
