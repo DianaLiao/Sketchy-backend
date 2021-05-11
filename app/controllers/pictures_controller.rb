@@ -38,6 +38,12 @@ class PicturesController < ApplicationController
     @picture.destroy
   end
 
+  def public
+    @pictures = Picture.public
+
+    render json: @pictures
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_picture
@@ -46,6 +52,6 @@ class PicturesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def picture_params
-      params.require(:picture).permit(:name, :favorite, :description, :public)
+      params.require(:picture).permit(:name, :favorite, :description, :isPublic)
     end
 end

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get "/pictures/public", to: "pictures#public"
+
   resources :pictures
   resources :picture_collections
   resources :collections
