@@ -45,6 +45,12 @@ class PicturesController < ApplicationController
     render json: @pictures
   end
 
+  def user_pictures
+    @pictures = Picture.where(user_id:params[:id])
+
+    render json: @pictures
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_picture

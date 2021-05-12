@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   post "/users/login", to: "users#login"
 
   get "/users/:id/collections", to: "collections#user_collections"
+  get "/users/:id/pictures", to: "pictures#user_pictures"
 
   resources :pictures
   resources :picture_collections
