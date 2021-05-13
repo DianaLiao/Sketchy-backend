@@ -3,4 +3,6 @@ class Collection < ApplicationRecord
     has_many :picture_collections
     has_many :pictures, through: :picture_collections
 
+
+
 end

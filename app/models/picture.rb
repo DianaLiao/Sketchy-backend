@@ -6,4 +6,10 @@ class Picture < ApplicationRecord
     def self.public
         Picture.where(isPublic: true)
     end
+
+    def first_collection
+        self.collections.first
+    end
+    
+
 end
