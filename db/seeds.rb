@@ -37,13 +37,13 @@ test_image_urls = ["https://media.timeout.com/images/105590782/1372/772/image.jp
 
 count = 1
 test_image_urls.each do |pic|
-    Picture.create(name: "Picture #{count}", description: "#{Faker::Lorem.sentence(word_count: 3)}", image_url: pic, user_id: (1..5).to_a.sample)
+    Picture.create(name: "Picture #{count}", description: "#{Faker::Lorem.sentence(word_count: 3)}", image_url: pic, user_id: (1..5).to_a.sample, isPublic: true)
     count += 1
 end
 
-15.times do
-    PictureCollection.create(collection_id: (1..12).to_a.sample , picture_id:(1..9).to_a.sample)
-end
+# 15.times do
+#     PictureCollection.create(collection_id: (1..12).to_a.sample , picture_id:(1..9).to_a.sample)
+# end
 
 puts "🖌️🎨 SUCCESSFULLY SEEDED 🎨🖌️ "
 
